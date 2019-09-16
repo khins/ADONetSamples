@@ -125,7 +125,8 @@ namespace ADONET_Samples.ViewModels
       ResultText = string.Empty;
       RowsAffected = 0;
 
-      // Initialize DataTable object to null in case of an error.
+      // Initialize DataTable object to null in case of an error. 
+      // additional text
       DataTable dt = null;
 
       // Create SQL statement to submit
