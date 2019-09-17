@@ -109,16 +109,13 @@ namespace ADONET_Samples.ViewModels
             StringBuilder sb = new StringBuilder(2048);
             int index = 1;
 
-            IEnumerable<DataRow> collection = dt.Rows.Cast<DataRow>();
-            
             // Process each row
-            collection.ToList().ForEach(r =>
+            dt.Rows.Cast<DataRow>().ToList().ForEach(r =>
             {
                 sb.AppendLine("** Row: " + index.ToString() + " **");
-                IEnumerable<DataColumn> columnsCollection = dt.Columns.Cast<DataColumn>();
 
                 // Process each column
-                columnsCollection.ToList().ForEach(c =>
+                dt.Columns.Cast<DataColumn>().ToList().ForEach(c =>
                 {
                     sb.AppendLine(c.ColumnName + ": " + r[c.ColumnName].ToString());
                 });
