@@ -55,7 +55,7 @@ namespace ADONET_Samples.ViewModels
           // Create command object in using block for automatic disposal
           using (SqlCommand cmd = new SqlCommand(sql, cnn)) {
             // NOTE: The following parameter is spelled incorrectly.
-            cmd.Parameters.Add(new SqlParameter("@ProdutName", "Generate Exception"));
+            cmd.Parameters.Add(new SqlParameter("@ProductName", "Generate Exception"));
             cmd.Parameters.Add(new SqlParameter("@IntroductionDate", DateTime.Now));
             cmd.Parameters.Add(new SqlParameter("@Url", "www.wrong.com"));
             cmd.Parameters.Add(new SqlParameter("@Price", 0));
